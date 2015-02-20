@@ -19,6 +19,7 @@
 	<!--dinamik kontent-->
 	<h1>Data Tersimpan</h1>
 	<?php
+	 header("refresh: 1;");
 	//koneksi database
 	include 'config/db_connect.php';
 	$action = isset($_GET['action'])?$_GET['action']:"";
@@ -55,7 +56,7 @@
 				echo "<td>{$lastname}</td>";
 				echo "<td>{$username}</td>";
 				echo "<td>";
-				echo "<a href='edit.php?=id={$id}'>EDIT</a>";
+				echo "<a href='edit.php?id={$id}'>EDIT</a>";
 				echo "/";			
 				echo "<a href='#' onclick='delete_user({$id});'>Delete</a>";
 				echo "</td>";
