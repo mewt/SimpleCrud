@@ -17,7 +17,6 @@
 			$query = "INSERT INTO users SET firstname=?, lastname=?, username=? , password=?";
 			//koneksi 
 			$stmt = $con->prepare($query);
-			
 			//bind parameter
 			//melewatkan parameter
 			//paramter ke 1
@@ -28,7 +27,6 @@
 			$stmt->bindParam(3,$_POST['username']);
 			//paramter ke 4
 			$stmt->bindParam(4,$_POST['password']);
-			
 			//eksekusi query
 			if($stmt->execute()){
 				echo "Berhasil disimpan.";
@@ -52,6 +50,10 @@
 		<tr>
 			<td>LastName</td>
 			<td><input type="text" name="lastname" required /></td>
+		</tr>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="username" required /></td>
 		</tr>
 		<tr>
 			<td>Password</td>
