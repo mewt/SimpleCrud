@@ -1,6 +1,10 @@
 <?php
 
-$host="localhost";
+/**
+ *  @file db_connect.php
+ *  @CodeMewt
+ */
+ 
 $dbname="bukutamu";
 $username="root";
 $password="";
